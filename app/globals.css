@@ -50,15 +50,37 @@ input:focus-visible {
   outline: none;
 }
 
-/* ── Chat widget responsive ───────────────────────────────────────────────── */
-@media (max-width: 640px) {
+/* ── Stats item border (desktop) ──────────────────────────────────────────── */
+.stats-item { border-right: 1px solid var(--border); }
+
+/* ── Mobile (≤768px) ──────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Navbar */
+  .nav-bar { padding: 0 16px !important; }
+  .nav-links { display: none; }
+  .nav-book-btn {
+    padding: 5px 12px !important;
+    font-size: 0.74rem !important;
+  }
+
+  /* Hero */
+  .hero-section {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    padding-bottom: 1.2rem !important;
+  }
+
+  /* Chat */
+  .chat-section {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
   .chat-widget {
     width: 100% !important;
     border-radius: 12px !important;
   }
-  .chat-pills {
-    gap: 5px !important;
-  }
+  .chat-messages { height: 340px !important; }
+  .chat-pills { gap: 5px !important; }
   .chat-input-row {
     flex-wrap: wrap;
     gap: 6px !important;
@@ -67,4 +89,17 @@ input:focus-visible {
     width: 100%;
     justify-content: center;
   }
+
+  /* Services */
+  .services-section {
+    padding: 2.5rem 1rem 3rem !important;
+  }
+
+  /* Stats grid — stack vertically */
+  .stats-grid { grid-template-columns: 1fr !important; }
+  .stats-item {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border);
+  }
+  .stats-item-last { border-bottom: none; }
 }

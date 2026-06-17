@@ -31,6 +31,7 @@ function Navbar() {
 
   return (
     <nav
+      className="nav-bar"
       style={{
         position: "fixed",
         top: 0,
@@ -61,7 +62,8 @@ function Navbar() {
         NEOKUKEY
       </span>
 
-      <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+        <div className="nav-links" style={{ display: "flex", alignItems: "center", gap: 24 }}>
         {navLinks.map(({ label, href }) => (
           <a
             key={href}
@@ -86,8 +88,10 @@ function Navbar() {
             {label}
           </a>
         ))}
+        </div>
         <a
           href="#book"
+          className="nav-book-btn"
           style={{
             fontFamily: "'Manrope', sans-serif",
             fontSize: "0.8rem",
@@ -122,6 +126,7 @@ function HeroSection() {
 
   return (
     <section
+      className="hero-section"
       style={{
         minHeight: "50vh",
         display: "flex",
@@ -261,6 +266,7 @@ function ChatSection() {
 
   return (
     <section
+      className="chat-section"
       style={{
         padding: "0 1.5rem 2rem",
         display: "flex",
@@ -346,6 +352,7 @@ function ChatSection() {
         {/* Messages */}
         <div
           ref={messagesRef}
+          className="chat-messages"
           role="log"
           aria-live="polite"
           aria-label={t("title")}
@@ -638,6 +645,7 @@ function ExperienceSection() {
   return (
     <section
       id="services"
+      className="services-section"
       style={{
         padding: "3.5rem 1.5rem 5rem",
         borderTop: "1px solid var(--border)",
@@ -749,6 +757,7 @@ function ExperienceSection() {
 
         {/* Stats strip */}
         <div
+          className="stats-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
@@ -761,11 +770,10 @@ function ExperienceSection() {
           {stats.map((stat, i) => (
             <div
               key={stat.label}
+              className={i < stats.length - 1 ? "stats-item" : "stats-item-last"}
               style={{
                 padding: "20px 14px",
                 textAlign: "center",
-                borderRight:
-                  i < stats.length - 1 ? "1px solid var(--border)" : "none",
               }}
             >
               <p
