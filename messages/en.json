@@ -16,6 +16,7 @@
     "initialMessage": "Hi! Ask me anything about NEOKUKEY — our services, process, or how AI automation could work for your business.",
     "placeholder": "Ask a question…",
     "bookCall": "Book a call",
+    "send": "Send message",
     "suggested": {
       "automate": "What can NEOKUKEY automate?",
       "timeline": "How long does integration take?",

@@ -36,3 +36,35 @@ body {
 
 ::-webkit-scrollbar { width: 0; }
 * { scrollbar-width: none; }
+
+/* ── Focus styles ─────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 5px;
+}
+
+/* textarea/input have custom border highlight — suppress default outline */
+textarea:focus-visible,
+input:focus-visible {
+  outline: none;
+}
+
+/* ── Chat widget responsive ───────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .chat-widget {
+    width: 100% !important;
+    border-radius: 12px !important;
+  }
+  .chat-pills {
+    gap: 5px !important;
+  }
+  .chat-input-row {
+    flex-wrap: wrap;
+    gap: 6px !important;
+  }
+  .chat-book-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

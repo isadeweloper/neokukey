@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { chatQA } from "@/lib/chatQA";
 import { Send, Calendar, Sparkles, Zap, GitBranch, Shield } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import LocaleSwitcher from "./components/LocaleSwitcher";
@@ -10,6 +11,7 @@ interface Message {
   id: string;
   role: "user" | "assistant";
   content: string;
+  showBookCall?: boolean;
 }
 
 const CARD_ICONS: LucideIcon[] = [Zap, GitBranch, Shield];
@@ -195,6 +197,7 @@ function ChatSection() {
   const [hovered, setHovered] = useState(false);
   const [hasSentMessage, setHasSentMessage] = useState(false);
   const messagesRef = useRef<HTMLDivElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     if (!hasSentMessage) return;
@@ -202,15 +205,27 @@ function ChatSection() {
     if (el) el.scrollTo({ top: el.scrollHeight, behavior: "smooth" });
   }, [messages, isTyping, hasSentMessage]);
 
-  const getResponse = (text: string): string => {
-    if (text === t("suggested.automate")) return t("responses.automate");
-    if (text === t("suggested.timeline")) return t("responses.timeline");
-    if (text === t("suggested.industries")) return t("responses.industries");
-    const l = text.toLowerCase();
-    if (l.includes("automat") || l.includes("автомат")) return t("responses.automate");
-    if (l.includes("data") || l.includes("pipeline") || l.includes("данн")) return t("responses.data");
-    if (l.includes("industr") || l.includes("client") || l.includes("отрасл")) return t("responses.industries");
-    return t("responses.default");
+  useEffect(() => {
+    const el = textareaRef.current;
+    if (!el) return;
+    el.style.height = "auto";
+    el.style.height = Math.min(el.scrollHeight, 80) + "px";
+  }, [input]);
+
+  const locale = useLocale();
+  const localeQA = chatQA[locale] ?? chatQA["en"];
+
+  const getResponse = (text: string): { content: string; showBookCall?: boolean } => {
+    const lower = text.toLowerCase();
+    for (const entry of localeQA.entries) {
+      if (text === entry.question) return { content: entry.answer };
+    }
+    for (const entry of localeQA.entries) {
+      if (entry.keywords.some((kw) => lower.includes(kw))) {
+        return { content: entry.answer };
+      }
+    }
+    return { content: localeQA.fallback, showBookCall: true };
   };
 
   const sendMessage = (text: string) => {
@@ -221,28 +236,28 @@ function ChatSection() {
       { id: Date.now().toString(), role: "user", content: text.trim() },
     ]);
     setInput("");
-    setIsTyping(true);
+    setTimeout(() => setIsTyping(true), 600);
     setTimeout(() => {
       setIsTyping(false);
+      const response = getResponse(text);
       setMessages((prev) => [
         ...prev,
         {
           id: (Date.now() + 1).toString(),
           role: "assistant",
-          content: getResponse(text),
+          content: response.content,
+          showBookCall: response.showBookCall,
         },
       ]);
-    }, 1100);
+    }, 1700);
   };
 
   const EASE = "cubic-bezier(0.22, 1, 0.36, 1)";
   const DURATION = "0.55s";
 
-  const suggested = [
-    t("suggested.automate"),
-    t("suggested.timeline"),
-    t("suggested.industries"),
-  ] as const;
+  const suggested = localeQA.entries
+    .filter((e) => localeQA.suggested.includes(e.id))
+    .sort((a, b) => localeQA.suggested.indexOf(a.id) - localeQA.suggested.indexOf(b.id));
 
   return (
     <section
@@ -253,6 +268,7 @@ function ChatSection() {
       }}
     >
       <div
+        className="chat-widget"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         style={{
@@ -330,6 +346,9 @@ function ChatSection() {
         {/* Messages */}
         <div
           ref={messagesRef}
+          role="log"
+          aria-live="polite"
+          aria-label={t("title")}
           style={{
             padding: "16px 18px",
             display: "flex",
@@ -374,6 +393,29 @@ function ChatSection() {
                 }}
               >
                 {msg.content}
+                {msg.showBookCall && (
+                  <a
+                    href="#book"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 5,
+                      marginTop: 10,
+                      padding: "6px 12px",
+                      borderRadius: 7,
+                      background: "var(--primary)",
+                      color: "var(--primary-foreground)",
+                      fontFamily: "'Manrope', sans-serif",
+                      fontSize: "0.75rem",
+                      fontWeight: 600,
+                      textDecoration: "none",
+                      letterSpacing: "-0.005em",
+                    }}
+                  >
+                    <Calendar size={11} />
+                    {t("bookCall")}
+                  </a>
+                )}
               </div>
             </div>
           ))}
@@ -410,6 +452,7 @@ function ChatSection() {
 
         {/* Suggested pills */}
         <div
+          className="chat-pills"
           style={{
             padding: "10px 18px",
             display: "flex",
@@ -418,10 +461,10 @@ function ChatSection() {
             borderTop: "1px solid var(--border)",
           }}
         >
-          {suggested.map((q) => (
+          {suggested.map((entry) => (
             <button
-              key={q}
-              onClick={() => sendMessage(q)}
+              key={entry.id}
+              onClick={() => sendMessage(entry.question)}
               style={{
                 fontFamily: "'Manrope', sans-serif",
                 fontSize: "0.72rem",
@@ -446,27 +489,35 @@ function ChatSection() {
                 el.style.borderColor = "var(--border)";
               }}
             >
-              {q}
+              {entry.question}
             </button>
           ))}
         </div>
 
         {/* Input row */}
         <div
+          className="chat-input-row"
           style={{
             display: "flex",
-            alignItems: "center",
+            alignItems: "flex-end",
             gap: 8,
             padding: "12px 18px",
             borderTop: "1px solid var(--border)",
           }}
         >
-          <input
-            type="text"
+          <textarea
+            ref={textareaRef}
             value={input}
+            rows={1}
             onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && sendMessage(input)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage(input);
+              }
+            }}
             placeholder={t("placeholder")}
+            aria-label={t("placeholder")}
             style={{
               flex: 1,
               background: "var(--input-background)",
@@ -477,14 +528,26 @@ function ChatSection() {
               fontSize: "0.845rem",
               color: "var(--foreground)",
               outline: "none",
-              transition: "border-color 0.2s",
+              transition: "border-color 0.2s, box-shadow 0.2s",
               letterSpacing: "-0.008em",
+              resize: "none",
+              overflow: "hidden",
+              lineHeight: "1.5",
+              display: "block",
             }}
-            onFocus={(e) => (e.target.style.borderColor = "var(--accent)")}
-            onBlur={(e) => (e.target.style.borderColor = "var(--border)")}
+            onFocus={(e) => {
+              e.target.style.borderColor = "var(--accent)";
+              e.target.style.boxShadow = "0 0 0 3px rgba(122, 85, 69, 0.14)";
+            }}
+            onBlur={(e) => {
+              e.target.style.borderColor = "var(--border)";
+              e.target.style.boxShadow = "none";
+            }}
           />
           <button
             onClick={() => sendMessage(input)}
+            aria-label={t("send")}
+            disabled={!input.trim()}
             style={{
               width: 34,
               height: 34,
@@ -510,6 +573,8 @@ function ChatSection() {
           </button>
           <a
             href="#book"
+            className="chat-book-btn"
+            aria-label={t("bookCall")}
             style={{
               display: "flex",
               alignItems: "center",

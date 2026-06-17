@@ -16,6 +16,7 @@
     "initialMessage": "Merhaba! NEOKUKEY hakkında her şeyi sorabilirsiniz — hizmetlerimiz, sürecimiz veya yapay zeka otomasyonunun işinize nasıl katkı sağlayabileceği hakkında.",
     "placeholder": "Bir soru sorun…",
     "bookCall": "Görüşme ayarla",
+    "send": "Mesaj gönder",
     "suggested": {
       "automate": "NEOKUKEY neler otomatikleştirebilir?",
       "timeline": "Entegrasyon ne kadar sürer?",
