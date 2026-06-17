@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "services": "Hizmetler",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "bookCall": "Görüşme ayarla"
+  },
+  "hero": {
+    "headingMain": "Fikirden sonuca —",
+    "headingAccent": "göründüğünden daha hızlı.",
+    "body": "İşletmelerin daha akıllı hareket etmesine, manuel iş yükünü azaltmasına ve sürtünmesiz sonuçlar elde etmesine yardımcı olan yapay zeka destekli sistemler ve otomasyonlar tasarlıyor ve inşa ediyoruz."
+  },
+  "chat": {
+    "title": "NEOKUKEY Asistanı",
+    "online": "Çevrimiçi",
+    "initialMessage": "Merhaba! NEOKUKEY hakkında her şeyi sorabilirsiniz — hizmetlerimiz, sürecimiz veya yapay zeka otomasyonunun işinize nasıl katkı sağlayabileceği hakkında.",
+    "placeholder": "Bir soru sorun…",
+    "bookCall": "Görüşme ayarla",
+    "suggested": {
+      "automate": "NEOKUKEY neler otomatikleştirebilir?",
+      "timeline": "Entegrasyon ne kadar sürer?",
+      "industries": "Hangi sektörlerle çalışıyorsunuz?"
+    },
+    "responses": {
+      "default": "Harika bir soru. NEOKUKEY'de her çözümü iş akışınıza özel olarak tasarlıyoruz — en iyi adım kısa bir keşif görüşmesi olurdu. Bir görüşme ayarlamak ister misiniz?",
+      "automate": "Belge işleme, veri boru hatları, çok adımlı iş akışları ve yapay zeka destekli kararları otomatikleştiriyoruz. Müşterilerin çoğu ilk ay içinde manuel iş yükünü %60–80 oranında azaltıyor.",
+      "timeline": "Odaklanmış bir proje genellikle 2–4 haftada teslim edilir. Daha büyük entegrasyonlar 6–10 hafta sürer. Sonuçları erken görmeniz için kısa iterasyonlarla çalışıyoruz.",
+      "data": "Veri boru hatları temel uzmanlık alanımızdır — SQL, API'ler, tablolar ve belgeler üzerinden veri alımı, dönüştürme, zenginleştirme ve teslimat.",
+      "industries": "Profesyonel hizmetler, e-ticaret, lojistik, SaaS ve finans alanlarında çalıştık. Ortak nokta, tekrarlayan bilgi işidir."
+    }
+  },
+  "services": {
+    "label": "Ne yapıyoruz",
+    "headingMain": "Sonuç isteyen ekipler için tasarlandı,",
+    "headingAccent": "karmaşıklık değil.",
+    "cards": {
+      "automation": {
+        "title": "Hızlı Otomasyon",
+        "description": "Otomasyonları günler içinde tasarlayıp hayata geçiriyoruz — çoğu proje iki ila dört hafta içinde yayına giriyor."
+      },
+      "integration": {
+        "title": "Uçtan Uca Entegrasyon",
+        "description": "Sistemlerinizi — API'ler, veritabanları, dahili araçlar — bilginin sürtünmesiz aktığı şekilde birbirine bağlıyoruz."
+      },
+      "reliability": {
+        "title": "Tasarımla Güvenilirlik",
+        "description": "Her sistem, siz bakmadığınızda bile çalışmaya devam etmesi için hata yönetimi ve izleme içerir."
+      }
+    },
+    "stats": {
+      "manualWork": "Manuel iş yükü azalması",
+      "deployment": "İlk dağıtıma kadar geçen süre",
+      "hours": "Haftada kazanılan saat"
+    }
+  }
+}

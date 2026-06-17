@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "services": "Leistungen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "bookCall": "Gespräch buchen"
+  },
+  "hero": {
+    "headingMain": "Von der Idee zum Ergebnis —",
+    "headingAccent": "schneller als gedacht.",
+    "body": "Wir konzipieren und entwickeln KI-gestützte Systeme und Automatisierungen, die Unternehmen helfen, intelligenter zu arbeiten, manuelle Arbeit zu reduzieren und Ergebnisse reibungslos zu liefern."
+  },
+  "chat": {
+    "title": "NEOKUKEY Assistent",
+    "online": "Online",
+    "initialMessage": "Hallo! Stellen Sie uns alles über NEOKUKEY — unsere Leistungen, unseren Prozess oder wie KI-Automatisierung Ihrem Unternehmen helfen kann.",
+    "placeholder": "Stellen Sie eine Frage…",
+    "bookCall": "Gespräch buchen",
+    "suggested": {
+      "automate": "Was kann NEOKUKEY automatisieren?",
+      "timeline": "Wie lange dauert eine Integration?",
+      "industries": "In welchen Branchen sind Sie tätig?"
+    },
+    "responses": {
+      "default": "Eine sehr gute Frage. Bei NEOKUKEY passen wir jede Lösung an Ihre spezifischen Abläufe an — der beste nächste Schritt ist ein kurzes Kennenlerngespräch. Soll ich eines buchen?",
+      "automate": "Wir automatisieren Dokumentenverarbeitung, Datenpipelines, mehrstufige Workflows und KI-gestützte Entscheidungen. Die meisten Kunden reduzieren manuelle Arbeit innerhalb des ersten Monats um 60–80 %.",
+      "timeline": "Ein fokussiertes Projekt wird in der Regel in 2–4 Wochen geliefert. Größere Integrationen dauern 6–10 Wochen. Wir arbeiten in kurzen Iterationen, damit Sie früh Ergebnisse sehen.",
+      "data": "Datenpipelines sind unsere Kernkompetenz — Erfassung, Transformation, Anreicherung und Bereitstellung über SQL, APIs, Tabellen und Dokumente.",
+      "industries": "Wir haben in professionellen Dienstleistungen, E-Commerce, Logistik, SaaS und Finanzwesen gearbeitet. Der gemeinsame Nenner ist repetitive Wissensarbeit."
+    }
+  },
+  "services": {
+    "label": "Was wir tun",
+    "headingMain": "Gebaut für Teams, die Ergebnisse wollen,",
+    "headingAccent": "keine Komplexität.",
+    "cards": {
+      "automation": {
+        "title": "Schnelle Automatisierung",
+        "description": "Wir konzipieren und liefern Automatisierungen in Tagen — die meisten Projekte gehen innerhalb von zwei bis vier Wochen live."
+      },
+      "integration": {
+        "title": "Durchgängige Integration",
+        "description": "Wir verbinden Ihre Systeme — APIs, Datenbanken, interne Tools — so, dass Informationen reibungslos fließen."
+      },
+      "reliability": {
+        "title": "Zuverlässigkeit by Design",
+        "description": "Jedes System enthält Fehlerbehandlung und Monitoring, damit alles läuft — auch wenn Sie nicht hinsehen."
+      }
+    },
+    "stats": {
+      "manualWork": "Reduzierung manueller Arbeit",
+      "deployment": "Zeit bis zum ersten Deployment",
+      "hours": "Stunden pro Woche zurückgewonnen"
+    }
+  }
+}
