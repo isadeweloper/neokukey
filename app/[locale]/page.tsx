@@ -41,17 +41,17 @@ function HeroSection() {
       <div style={{ maxWidth: 520, width: "100%", textAlign: "center" }}>
         <h1
           style={{
-            fontFamily: "'Manrope', sans-serif",
-            fontSize: "clamp(1.85rem, 4.2vw, 2.9rem)",
-            fontWeight: 300,
-            letterSpacing: "-0.03em",
-            lineHeight: 1.18,
+            fontFamily: "'Caveat', cursive",
+            fontSize: "clamp(2.6rem, 6vw, 4.2rem)",
+            fontWeight: 500,
+            letterSpacing: "0",
+            lineHeight: 1.12,
             color: "var(--foreground)",
             marginBottom: "1.1rem",
           }}
         >
           {t("headingMain")}{" "}
-          <span style={{ fontWeight: 500, color: "var(--accent)" }}>
+          <span style={{ fontWeight: 700, color: "var(--accent)" }}>
             {t("headingAccent")}
           </span>
         </h1>
