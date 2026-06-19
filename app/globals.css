@@ -57,11 +57,10 @@ input:focus-visible {
 @media (max-width: 768px) {
   /* Navbar */
   .nav-bar { padding: 0 16px !important; }
-  .nav-links { display: none; }
-  .nav-book-btn {
-    padding: 5px 12px !important;
-    font-size: 0.74rem !important;
-  }
+  .nav-links { display: none !important; }
+  .nav-burger { display: flex !important; }
+  /* On mobile the call-to-action lives inside the burger menu */
+  .nav-book-btn { display: none !important; }
 
   /* Hero */
   .hero-section {

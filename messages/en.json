@@ -3,7 +3,8 @@
     "services": "Services",
     "about": "About",
     "contact": "Contact",
-    "bookCall": "Book a call"
+    "bookCall": "Book a call",
+    "menu": "Menu"
   },
   "hero": {
     "headingMain": "From idea to result —",

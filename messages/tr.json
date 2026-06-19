@@ -3,7 +3,8 @@
     "services": "Hizmetler",
     "about": "Hakkımızda",
     "contact": "İletişim",
-    "bookCall": "Görüşme ayarla"
+    "bookCall": "Görüşme ayarla",
+    "menu": "Menü"
   },
   "hero": {
     "headingMain": "Fikirden sonuca —",
