@@ -53,5 +53,17 @@
       "deployment": "Time to first deployment",
       "hours": "Hours reclaimed per week"
     }
+  },
+  "about": {
+    "label": "About",
+    "heading": "The NEOKUKEY team",
+    "body": "We design and build AI-powered systems and automations that help businesses move smarter and cut manual work. Below are the people you'll be working with.",
+    "peopleLabel": "Our team"
+  },
+  "contact": {
+    "label": "Contact",
+    "heading": "Get in touch",
+    "body": "Want to discuss a project or ask a question? Reach out to our team directly.",
+    "peopleLabel": "Contacts"
   }
 }

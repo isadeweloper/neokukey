@@ -53,5 +53,17 @@
       "deployment": "İlk dağıtıma kadar geçen süre",
       "hours": "Haftada kazanılan saat"
     }
+  },
+  "about": {
+    "label": "Hakkımızda",
+    "heading": "NEOKUKEY ekibi",
+    "body": "İşletmelerin daha akıllı çalışmasına ve manuel işi azaltmasına yardımcı olan yapay zeka destekli sistemler ve otomasyonlar tasarlıyor ve geliştiriyoruz. Birlikte çalışacağınız ekip aşağıdadır.",
+    "peopleLabel": "Ekibimiz"
+  },
+  "contact": {
+    "label": "İletişim",
+    "heading": "Bize ulaşın",
+    "body": "Bir projeyi görüşmek veya soru sormak mı istiyorsunuz? Doğrudan ekibimizle iletişime geçin.",
+    "peopleLabel": "İletişim"
   }
 }

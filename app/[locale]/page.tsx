@@ -5,7 +5,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { chatQA } from "@/lib/chatQA";
 import { Send, Calendar, Sparkles, Zap, GitBranch, Shield } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import LocaleSwitcher from "./components/LocaleSwitcher";
+import Navbar from "./components/Navbar";
 
 interface Message {
   id: string;
@@ -18,106 +18,6 @@ const CARD_ICONS: LucideIcon[] = [Zap, GitBranch, Shield];
 const CARD_KEYS = ["automation", "integration", "reliability"] as const;
 const STAT_VALUES = ["60–80%", "2–4 wks", "15–40h"];
 const STAT_KEYS = ["manualWork", "deployment", "hours"] as const;
-
-/* ── Navbar ──────────────────────────────────────────────── */
-
-function Navbar() {
-  const t = useTranslations("nav");
-  const navLinks = [
-    { label: t("services"), href: "#services" },
-    { label: t("about"), href: "#about" },
-    { label: t("contact"), href: "#contact" },
-  ];
-
-  return (
-    <nav
-      className="nav-bar"
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 50,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        padding: "0 28px",
-        height: 52,
-        background: "rgba(245, 240, 234, 0.85)",
-        backdropFilter: "blur(14px)",
-        WebkitBackdropFilter: "blur(14px)",
-        borderBottom: "1px solid var(--border)",
-      }}
-    >
-      <span
-        style={{
-          fontFamily: "'Manrope', sans-serif",
-          fontSize: "0.8rem",
-          fontWeight: 700,
-          letterSpacing: "0.14em",
-          textTransform: "uppercase",
-          color: "var(--foreground)",
-        }}
-      >
-        NEOKUKEY
-      </span>
-
-      <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-        <div className="nav-links" style={{ display: "flex", alignItems: "center", gap: 24 }}>
-        {navLinks.map(({ label, href }) => (
-          <a
-            key={href}
-            href={href}
-            style={{
-              fontFamily: "'Manrope', sans-serif",
-              fontSize: "0.82rem",
-              color: "var(--muted-foreground)",
-              textDecoration: "none",
-              fontWeight: 400,
-              transition: "color 0.15s",
-              letterSpacing: "-0.01em",
-            }}
-            onMouseEnter={(e) =>
-              ((e.target as HTMLAnchorElement).style.color = "var(--foreground)")
-            }
-            onMouseLeave={(e) =>
-              ((e.target as HTMLAnchorElement).style.color =
-                "var(--muted-foreground)")
-            }
-          >
-            {label}
-          </a>
-        ))}
-        </div>
-        <a
-          href="#book"
-          className="nav-book-btn"
-          style={{
-            fontFamily: "'Manrope', sans-serif",
-            fontSize: "0.8rem",
-            fontWeight: 600,
-            padding: "6px 16px",
-            borderRadius: 8,
-            background: "var(--primary)",
-            color: "var(--primary-foreground)",
-            textDecoration: "none",
-            transition: "opacity 0.18s",
-            letterSpacing: "-0.01em",
-          }}
-          onMouseEnter={(e) =>
-            ((e.currentTarget as HTMLAnchorElement).style.opacity = "0.85")
-          }
-          onMouseLeave={(e) =>
-            ((e.currentTarget as HTMLAnchorElement).style.opacity = "1")
-          }
-        >
-          {t("bookCall")}
-        </a>
-        <LocaleSwitcher />
-      </div>
-    </nav>
-  );
-}
 
 /* ── Hero ────────────────────────────────────────────────── */
 

@@ -53,5 +53,17 @@
       "deployment": "Zeit bis zum ersten Deployment",
       "hours": "Stunden pro Woche zurückgewonnen"
     }
+  },
+  "about": {
+    "label": "Über uns",
+    "heading": "Das NEOKUKEY-Team",
+    "body": "Wir entwerfen und entwickeln KI-gestützte Systeme und Automatisierungen, die Unternehmen helfen, intelligenter zu arbeiten und manuelle Arbeit zu reduzieren. Hier sind die Menschen, mit denen Sie zusammenarbeiten werden.",
+    "peopleLabel": "Unser Team"
+  },
+  "contact": {
+    "label": "Kontakt",
+    "heading": "Kontakt aufnehmen",
+    "body": "Möchten Sie ein Projekt besprechen oder eine Frage stellen? Wenden Sie sich direkt an unser Team.",
+    "peopleLabel": "Kontakte"
   }
 }
