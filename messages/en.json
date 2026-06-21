@@ -66,5 +66,28 @@
     "heading": "Get in touch",
     "body": "Want to discuss a project or ask a question? Reach out to our team directly.",
     "peopleLabel": "Contacts"
+  },
+  "footer": {
+    "tagline": "AI-powered systems and automations that help businesses move smarter.",
+    "navTitle": "Navigation",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "contactsTitle": "Contacts",
+    "rights": "All rights reserved."
+  },
+  "meta": {
+    "home": {
+      "title": "NEOKUKEY — AI & Automation Studio",
+      "description": "We design and build AI-powered systems and automations that help businesses move smarter, cut manual work, and deliver results without friction."
+    },
+    "about": {
+      "title": "About — NEOKUKEY",
+      "description": "Meet NEOKUKEY — the team building AI-powered systems and automations that help businesses work smarter and cut manual work."
+    },
+    "contact": {
+      "title": "Contact — NEOKUKEY",
+      "description": "Get in touch with NEOKUKEY to discuss an AI or automation project. Reach our team directly."
+    }
   }
 }

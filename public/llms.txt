@@ -1,0 +1,37 @@
+# NEOKUKEY
+
+> NEOKUKEY is an AI & automation studio that designs and builds AI-powered
+> systems and automations, helping businesses move smarter, cut manual work,
+> and deliver results without friction.
+
+NEOKUKEY ships focused automation projects fast and integrates them end-to-end
+across a company's existing tools. Typical outcomes reported on the site:
+60–80% reduction in manual work, first deployment in 2–4 weeks, and 15–40 hours
+reclaimed per team every week.
+
+Industries served: professional services, e-commerce, logistics, SaaS, and finance.
+Languages: English, Русский, Deutsch, Türkçe.
+
+## Services
+
+- **Rapid Automation** — We scope, build, and ship automations in days; most projects are live within two to four weeks.
+- **End-to-End Integration** — We connect your systems (APIs, databases, internal tools) so information flows without friction.
+- **Reliable by Design** — Every system includes error handling and monitoring so things keep running when you're not watching.
+- **Data Pipelines** — Ingestion, transformation, enrichment, and delivery across SQL, APIs, spreadsheets, and documents.
+- **AI-driven Workflows** — Document processing, multi-step workflows, and AI-driven decisions.
+
+## Process
+
+1. **Discovery call** — a short call to understand your workflows and goals.
+2. **Scoping** — define a focused, high-impact project.
+3. **Build in tight iterations** — so you see results early.
+4. **Launch** — focused projects ship in 2–4 weeks; larger integrations in 6–10 weeks.
+5. **Reliability** — error handling and monitoring are built in from the start.
+
+## Contact
+
+- [Home](https://247sokak.vercel.app/en)
+- [About](https://247sokak.vercel.app/en/about)
+- [Contact](https://247sokak.vercel.app/en/contact)
+
+Team contacts: Братаниевич Минихан Бурмалдеевич, Глеб Сергеевич Ерунда

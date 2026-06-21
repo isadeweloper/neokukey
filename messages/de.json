@@ -66,5 +66,28 @@
     "heading": "Kontakt aufnehmen",
     "body": "Möchten Sie ein Projekt besprechen oder eine Frage stellen? Wenden Sie sich direkt an unser Team.",
     "peopleLabel": "Kontakte"
+  },
+  "footer": {
+    "tagline": "KI-gestützte Systeme und Automatisierungen, die Unternehmen helfen, intelligenter zu arbeiten.",
+    "navTitle": "Navigation",
+    "home": "Startseite",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "contactsTitle": "Kontakte",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "meta": {
+    "home": {
+      "title": "NEOKUKEY — Studio für KI & Automatisierung",
+      "description": "Wir konzipieren und entwickeln KI-gestützte Systeme und Automatisierungen, die Unternehmen helfen, intelligenter zu arbeiten, manuelle Arbeit zu reduzieren und Ergebnisse reibungslos zu liefern."
+    },
+    "about": {
+      "title": "Über uns — NEOKUKEY",
+      "description": "Das Team von NEOKUKEY entwickelt KI-gestützte Systeme und Automatisierungen, die Unternehmen helfen, intelligenter zu arbeiten."
+    },
+    "contact": {
+      "title": "Kontakt — NEOKUKEY",
+      "description": "Nehmen Sie Kontakt mit NEOKUKEY auf, um ein KI- oder Automatisierungsprojekt zu besprechen. Wenden Sie sich direkt an unser Team."
+    }
   }
 }

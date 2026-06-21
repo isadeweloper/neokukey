@@ -6,6 +6,8 @@ import { chatQA } from "@/lib/chatQA";
 import { Send, Calendar, Sparkles, Zap, GitBranch, Shield } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import Navbar from "./components/Navbar";
+import JsonLd from "./components/JsonLd";
+import { organizationLd, faqPageLd } from "@/lib/structuredData";
 
 interface Message {
   id: string;
@@ -626,7 +628,7 @@ function ExperienceSection() {
               >
                 <Icon size={14} color="var(--accent)" strokeWidth={1.8} />
               </div>
-              <p
+              <h3
                 style={{
                   fontFamily: "'Manrope', sans-serif",
                   fontSize: "0.875rem",
@@ -638,7 +640,7 @@ function ExperienceSection() {
                 }}
               >
                 {title}
-              </p>
+              </h3>
               <p
                 style={{
                   fontFamily: "'Manrope', sans-serif",
@@ -711,8 +713,13 @@ function ExperienceSection() {
 /* ── Page ────────────────────────────────────────────────── */
 
 export default function Page() {
+  const locale = useLocale();
+  const localeQA = chatQA[locale] ?? chatQA.en;
+
   return (
     <div style={{ minHeight: "100vh", background: "var(--background)" }}>
+      <JsonLd data={organizationLd()} />
+      <JsonLd data={faqPageLd(localeQA.entries)} />
       <Navbar />
       <main>
         <HeroSection />

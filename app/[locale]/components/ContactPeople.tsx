@@ -1,6 +1,6 @@
 /* Shared list of NEOKUKEY contacts, shown on the About and Contact pages. */
 
-const PEOPLE = [
+export const PEOPLE = [
   "Братаниевич Минихан Бурмалдеевич",
   "Глеб Сергеевич Ерунда",
 ];
@@ -8,7 +8,7 @@ const PEOPLE = [
 export default function ContactPeople({ label }: { label: string }) {
   return (
     <div>
-      <p
+      <h2
         style={{
           fontFamily: "'Manrope', sans-serif",
           fontSize: "0.68rem",
@@ -20,7 +20,7 @@ export default function ContactPeople({ label }: { label: string }) {
         }}
       >
         {label}
-      </p>
+      </h2>
       <div
         style={{
           display: "grid",

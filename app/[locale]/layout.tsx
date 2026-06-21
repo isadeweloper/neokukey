@@ -3,13 +3,23 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { SITE_URL } from "@/lib/site";
+import { buildPageMetadata } from "@/lib/metadata";
+import Footer from "./components/Footer";
 import "../globals.css";
 
-export const metadata: Metadata = {
-  title: "NEOKUKEY — AI & Automation",
-  description:
-    "We design and build AI-powered systems and automations that help businesses move smarter, cut manual work, and deliver results without friction.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const base = hasLocale(routing.locales, locale) ? locale : routing.defaultLocale;
+  return {
+    metadataBase: new URL(SITE_URL),
+    ...(await buildPageMetadata(base, "", "home")),
+  };
+}
 
 export default async function LocaleLayout({
   children,
@@ -29,6 +39,7 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider messages={messages}>
       {children}
+      <Footer />
     </NextIntlClientProvider>
   );
 }
