@@ -59,13 +59,15 @@
     "label": "Hakkımızda",
     "heading": "NEOKUKEY ekibi",
     "body": "İşletmelerin daha akıllı çalışmasına ve manuel işi azaltmasına yardımcı olan yapay zeka destekli sistemler ve otomasyonlar tasarlıyor ve geliştiriyoruz. Birlikte çalışacağınız ekip aşağıdadır.",
-    "peopleLabel": "Ekibimiz"
+    "peopleLabel": "Ekibimiz",
+    "cta": "Bir projeniz mi var? Bize ulaşın →"
   },
   "contact": {
     "label": "İletişim",
     "heading": "Bize ulaşın",
     "body": "Bir projeyi görüşmek veya soru sormak mı istiyorsunuz? Doğrudan ekibimizle iletişime geçin.",
-    "peopleLabel": "İletişim"
+    "peopleLabel": "İletişim",
+    "cta": "Bizi daha yakından tanımak ister misiniz? Hakkımızda →"
   },
   "footer": {
     "tagline": "İşletmelerin daha akıllı çalışmasına yardımcı olan yapay zeka sistemleri ve otomasyonlar.",
@@ -82,11 +84,11 @@
       "description": "İşletmelerin daha akıllı çalışmasına, manuel işi azaltmasına ve sürtünmesiz sonuçlar elde etmesine yardımcı olan yapay zeka destekli sistemler ve otomasyonlar tasarlıyor ve geliştiriyoruz."
     },
     "about": {
-      "title": "Hakkımızda — NEOKUKEY",
+      "title": "Hakkımızda",
       "description": "NEOKUKEY ekibi, işletmelerin daha akıllı çalışmasına yardımcı olan yapay zeka destekli sistemler ve otomasyonlar geliştirir."
     },
     "contact": {
-      "title": "İletişim — NEOKUKEY",
+      "title": "İletişim",
       "description": "Bir yapay zeka veya otomasyon projesini görüşmek için NEOKUKEY ile iletişime geçin. Doğrudan ekibimize ulaşın."
     }
   }

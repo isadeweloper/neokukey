@@ -3,7 +3,6 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { SITE_URL } from "@/lib/site";
 import { buildPageMetadata } from "@/lib/metadata";
 import Footer from "./components/Footer";
 import "../globals.css";
@@ -15,10 +14,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const base = hasLocale(routing.locales, locale) ? locale : routing.defaultLocale;
-  return {
-    metadataBase: new URL(SITE_URL),
-    ...(await buildPageMetadata(base, "", "home")),
-  };
+  return buildPageMetadata(base, "", "home");
 }
 
 export default async function LocaleLayout({

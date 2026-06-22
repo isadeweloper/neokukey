@@ -30,8 +30,8 @@ Languages: English, Русский, Deutsch, Türkçe.
 
 ## Contact
 
-- [Home](https://247sokak.vercel.app/en)
-- [About](https://247sokak.vercel.app/en/about)
-- [Contact](https://247sokak.vercel.app/en/contact)
+- [Home](https://neokukey-59o8.vercel.app/en)
+- [About](https://neokukey-59o8.vercel.app/en/about)
+- [Contact](https://neokukey-59o8.vercel.app/en/contact)
 
 Team contacts: Братаниевич Минихан Бурмалдеевич, Глеб Сергеевич Ерунда

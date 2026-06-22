@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import Navbar from "../components/Navbar";
 import ContactPeople from "../components/ContactPeople";
 import { buildPageMetadata } from "@/lib/metadata";
@@ -29,7 +30,7 @@ export default function AboutPage() {
         >
           <p
             style={{
-              fontFamily: "'Manrope', sans-serif",
+              fontFamily: "var(--font-manrope), sans-serif",
               fontSize: "0.68rem",
               fontWeight: 700,
               letterSpacing: "0.16em",
@@ -42,7 +43,7 @@ export default function AboutPage() {
           </p>
           <h1
             style={{
-              fontFamily: "'Manrope', sans-serif",
+              fontFamily: "var(--font-manrope), sans-serif",
               fontSize: "clamp(1.8rem, 4vw, 2.6rem)",
               fontWeight: 300,
               letterSpacing: "-0.03em",
@@ -55,7 +56,7 @@ export default function AboutPage() {
           </h1>
           <p
             style={{
-              fontFamily: "'Manrope', sans-serif",
+              fontFamily: "var(--font-manrope), sans-serif",
               fontSize: "clamp(0.9rem, 1.7vw, 1rem)",
               lineHeight: 1.72,
               color: "var(--muted-foreground)",
@@ -68,6 +69,22 @@ export default function AboutPage() {
           </p>
 
           <ContactPeople label={t("peopleLabel")} />
+
+          <p style={{ marginTop: "2.5rem" }}>
+            <Link
+              href="/contact"
+              className="cta-link"
+              style={{
+                fontFamily: "var(--font-manrope), sans-serif",
+                fontSize: "0.95rem",
+                fontWeight: 600,
+                textDecoration: "none",
+                letterSpacing: "-0.01em",
+              }}
+            >
+              {t("cta")}
+            </Link>
+          </p>
         </section>
       </main>
     </div>

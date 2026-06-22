@@ -59,13 +59,15 @@
     "label": "About",
     "heading": "The NEOKUKEY team",
     "body": "We design and build AI-powered systems and automations that help businesses move smarter and cut manual work. Below are the people you'll be working with.",
-    "peopleLabel": "Our team"
+    "peopleLabel": "Our team",
+    "cta": "Have a project in mind? Get in touch →"
   },
   "contact": {
     "label": "Contact",
     "heading": "Get in touch",
     "body": "Want to discuss a project or ask a question? Reach out to our team directly.",
-    "peopleLabel": "Contacts"
+    "peopleLabel": "Contacts",
+    "cta": "Want to know more about us? About NEOKUKEY →"
   },
   "footer": {
     "tagline": "AI-powered systems and automations that help businesses move smarter.",
@@ -82,11 +84,11 @@
       "description": "We design and build AI-powered systems and automations that help businesses move smarter, cut manual work, and deliver results without friction."
     },
     "about": {
-      "title": "About — NEOKUKEY",
+      "title": "About",
       "description": "Meet NEOKUKEY — the team building AI-powered systems and automations that help businesses work smarter and cut manual work."
     },
     "contact": {
-      "title": "Contact — NEOKUKEY",
+      "title": "Contact",
       "description": "Get in touch with NEOKUKEY to discuss an AI or automation project. Reach our team directly."
     }
   }

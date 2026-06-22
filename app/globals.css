@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -29,7 +28,7 @@ html,
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: 'Manrope', sans-serif;
+  font-family: var(--font-manrope), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -49,6 +48,25 @@ textarea:focus-visible,
 input:focus-visible {
   outline: none;
 }
+
+/* ── Footer links (CSS hover → Footer can be a Server Component) ───────────── */
+.footer-link { color: var(--muted-foreground); }
+.footer-link:hover { color: var(--foreground); }
+
+/* ── Contextual CTA link (About ↔ Contact cross-links) ────────────────────── */
+.cta-link { color: var(--accent); transition: opacity 0.15s; }
+.cta-link:hover { opacity: 0.7; }
+
+/* ── Service cards (CSS hover → Services can be a Server Component) ─────────── */
+.service-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  padding: 20px;
+  cursor: default;
+  transition: transform 0.18s ease;
+}
+.service-card:hover { transform: translateY(-2px); }
 
 /* ── Stats item border (desktop) ──────────────────────────────────────────── */
 .stats-item { border-right: 1px solid var(--border); }

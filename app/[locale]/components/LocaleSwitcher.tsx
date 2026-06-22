@@ -29,7 +29,7 @@ export default function LocaleSwitcher() {
       <button
         onClick={() => setOpen((v) => !v)}
         style={{
-          fontFamily: "'Manrope', sans-serif",
+          fontFamily: "var(--font-manrope), sans-serif",
           fontSize: "0.76rem",
           fontWeight: 600,
           color: "var(--muted-foreground)",
@@ -113,7 +113,7 @@ export default function LocaleSwitcher() {
                   display: "block",
                   width: "100%",
                   padding: "7px 14px",
-                  fontFamily: "'Manrope', sans-serif",
+                  fontFamily: "var(--font-manrope), sans-serif",
                   fontSize: "0.76rem",
                   fontWeight: locale === currentLocale ? 600 : 400,
                   color:

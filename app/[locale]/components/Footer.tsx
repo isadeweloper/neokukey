@@ -1,5 +1,3 @@
-"use client";
-
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { PEOPLE } from "./ContactPeople";
@@ -13,7 +11,7 @@ export default function Footer() {
   ];
 
   const colTitle = {
-    fontFamily: "'Manrope', sans-serif",
+    fontFamily: "var(--font-manrope), sans-serif",
     fontSize: "0.68rem",
     fontWeight: 700,
     letterSpacing: "0.16em",
@@ -44,7 +42,7 @@ export default function Footer() {
           <div>
             <span
               style={{
-                fontFamily: "'Manrope', sans-serif",
+                fontFamily: "var(--font-manrope), sans-serif",
                 fontSize: "0.8rem",
                 fontWeight: 700,
                 letterSpacing: "0.14em",
@@ -56,7 +54,7 @@ export default function Footer() {
             </span>
             <p
               style={{
-                fontFamily: "'Manrope', sans-serif",
+                fontFamily: "var(--font-manrope), sans-serif",
                 fontSize: "0.82rem",
                 color: "var(--muted-foreground)",
                 lineHeight: 1.6,
@@ -77,24 +75,16 @@ export default function Footer() {
                 <Link
                   key={href}
                   href={href}
+                  className="footer-link"
                   style={{
-                    fontFamily: "'Manrope', sans-serif",
+                    fontFamily: "var(--font-manrope), sans-serif",
                     fontSize: "0.85rem",
-                    color: "var(--muted-foreground)",
                     textDecoration: "none",
                     fontWeight: 400,
                     transition: "color 0.15s",
                     letterSpacing: "-0.005em",
                     width: "fit-content",
                   }}
-                  onMouseEnter={(e) =>
-                    ((e.currentTarget as HTMLAnchorElement).style.color =
-                      "var(--foreground)")
-                  }
-                  onMouseLeave={(e) =>
-                    ((e.currentTarget as HTMLAnchorElement).style.color =
-                      "var(--muted-foreground)")
-                  }
                 >
                   {label}
                 </Link>
@@ -110,7 +100,7 @@ export default function Footer() {
                 <span
                   key={name}
                   style={{
-                    fontFamily: "'Manrope', sans-serif",
+                    fontFamily: "var(--font-manrope), sans-serif",
                     fontSize: "0.85rem",
                     color: "var(--foreground)",
                     lineHeight: 1.5,
@@ -139,7 +129,7 @@ export default function Footer() {
         >
           <span
             style={{
-              fontFamily: "'Manrope', sans-serif",
+              fontFamily: "var(--font-manrope), sans-serif",
               fontSize: "0.76rem",
               color: "var(--muted-foreground)",
               letterSpacing: "-0.005em",
@@ -149,7 +139,7 @@ export default function Footer() {
           </span>
           <span
             style={{
-              fontFamily: "'Manrope', sans-serif",
+              fontFamily: "var(--font-manrope), sans-serif",
               fontSize: "0.76rem",
               color: "var(--muted-foreground)",
               letterSpacing: "-0.005em",

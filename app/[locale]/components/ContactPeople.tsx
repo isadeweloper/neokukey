@@ -10,7 +10,7 @@ export default function ContactPeople({ label }: { label: string }) {
     <div>
       <h2
         style={{
-          fontFamily: "'Manrope', sans-serif",
+          fontFamily: "var(--font-manrope), sans-serif",
           fontSize: "0.68rem",
           fontWeight: 700,
           letterSpacing: "0.16em",
@@ -40,7 +40,7 @@ export default function ContactPeople({ label }: { label: string }) {
           >
             <p
               style={{
-                fontFamily: "'Manrope', sans-serif",
+                fontFamily: "var(--font-manrope), sans-serif",
                 fontSize: "0.95rem",
                 fontWeight: 600,
                 color: "var(--foreground)",

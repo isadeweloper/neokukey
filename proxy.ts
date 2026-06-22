@@ -8,5 +8,8 @@ export function proxy(request: Parameters<typeof handleI18nRouting>[0]) {
 }
 
 export const config = {
-  matcher: ["/((?!_next|api|favicon\\.ico|.*\\..*).*)"],
+  // Exclude root metadata routes (icon, apple-icon) so the i18n proxy doesn't
+  // redirect them to a locale prefix. favicon.ico and *.xml/*.txt already match
+  // the dot rule.
+  matcher: ["/((?!_next|api|favicon\\.ico|icon|apple-icon|.*\\..*).*)"],
 };

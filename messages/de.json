@@ -59,13 +59,15 @@
     "label": "Über uns",
     "heading": "Das NEOKUKEY-Team",
     "body": "Wir entwerfen und entwickeln KI-gestützte Systeme und Automatisierungen, die Unternehmen helfen, intelligenter zu arbeiten und manuelle Arbeit zu reduzieren. Hier sind die Menschen, mit denen Sie zusammenarbeiten werden.",
-    "peopleLabel": "Unser Team"
+    "peopleLabel": "Unser Team",
+    "cta": "Ein Projekt im Kopf? Kontaktieren Sie uns →"
   },
   "contact": {
     "label": "Kontakt",
     "heading": "Kontakt aufnehmen",
     "body": "Möchten Sie ein Projekt besprechen oder eine Frage stellen? Wenden Sie sich direkt an unser Team.",
-    "peopleLabel": "Kontakte"
+    "peopleLabel": "Kontakte",
+    "cta": "Mehr über uns erfahren? Über uns →"
   },
   "footer": {
     "tagline": "KI-gestützte Systeme und Automatisierungen, die Unternehmen helfen, intelligenter zu arbeiten.",
@@ -82,11 +84,11 @@
       "description": "Wir konzipieren und entwickeln KI-gestützte Systeme und Automatisierungen, die Unternehmen helfen, intelligenter zu arbeiten, manuelle Arbeit zu reduzieren und Ergebnisse reibungslos zu liefern."
     },
     "about": {
-      "title": "Über uns — NEOKUKEY",
+      "title": "Über uns",
       "description": "Das Team von NEOKUKEY entwickelt KI-gestützte Systeme und Automatisierungen, die Unternehmen helfen, intelligenter zu arbeiten."
     },
     "contact": {
-      "title": "Kontakt — NEOKUKEY",
+      "title": "Kontakt",
       "description": "Nehmen Sie Kontakt mit NEOKUKEY auf, um ein KI- oder Automatisierungsprojekt zu besprechen. Wenden Sie sich direkt an unser Team."
     }
   }

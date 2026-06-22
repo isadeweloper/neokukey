@@ -38,7 +38,7 @@ export default function Navbar() {
       <Link
         href="/"
         style={{
-          fontFamily: "'Manrope', sans-serif",
+          fontFamily: "var(--font-manrope), sans-serif",
           fontSize: "0.8rem",
           fontWeight: 700,
           letterSpacing: "0.14em",
@@ -57,7 +57,7 @@ export default function Navbar() {
             key={href}
             href={href}
             style={{
-              fontFamily: "'Manrope', sans-serif",
+              fontFamily: "var(--font-manrope), sans-serif",
               fontSize: "0.82rem",
               color: "var(--muted-foreground)",
               textDecoration: "none",
@@ -81,7 +81,7 @@ export default function Navbar() {
           href="#book"
           className="nav-book-btn"
           style={{
-            fontFamily: "'Manrope', sans-serif",
+            fontFamily: "var(--font-manrope), sans-serif",
             fontSize: "0.8rem",
             fontWeight: 600,
             padding: "6px 16px",
@@ -159,7 +159,7 @@ export default function Navbar() {
                 href={href}
                 onClick={() => setOpen(false)}
                 style={{
-                  fontFamily: "'Manrope', sans-serif",
+                  fontFamily: "var(--font-manrope), sans-serif",
                   fontSize: "0.95rem",
                   color: "var(--foreground)",
                   textDecoration: "none",
@@ -176,7 +176,7 @@ export default function Navbar() {
               href="#book"
               onClick={() => setOpen(false)}
               style={{
-                fontFamily: "'Manrope', sans-serif",
+                fontFamily: "var(--font-manrope), sans-serif",
                 fontSize: "0.9rem",
                 fontWeight: 600,
                 textAlign: "center",
