@@ -3,6 +3,7 @@ import { Manrope, Caveat } from "next/font/google";
 import { headers } from "next/headers";
 import { SITE_URL } from "@/lib/site";
 import { SITE_NAME, OG_BASE, TWITTER_BASE } from "@/lib/metadata";
+import Preloader from "./components/Preloader";
 
 /* Self-hosted via next/font — no external request, no layout shift (FOUT).
    Both are variable fonts, so no weight list is needed. */
@@ -39,7 +40,10 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={`${manrope.variable} ${caveat.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Preloader />
+        {children}
+      </body>
     </html>
   );
 }

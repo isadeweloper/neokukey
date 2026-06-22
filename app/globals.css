@@ -36,6 +36,69 @@ body {
 ::-webkit-scrollbar { width: 0; }
 * { scrollbar-width: none; }
 
+/* ── Preloader (brand splash, first visit per session) ────────────────────── */
+/* Always in the DOM but hidden — only shown when the inline script adds
+   `.preloading` to <html> on a first visit, so crawlers/repeat visits see the
+   real content with no splash. */
+.preloader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+html.preloading .preloader-overlay { display: flex; }
+html.preloading body { overflow: hidden; }
+.preloader-overlay.is-hiding { opacity: 0; pointer-events: none; }
+
+.preloader-mark {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-manrope), sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+  animation: nkFadeIn 0.5s ease both, nkPulse 1.6s ease-in-out 0.5s infinite;
+}
+/* Thin, minimal rotating indicator around the mark. */
+.preloader-mark::after {
+  content: "";
+  position: absolute;
+  inset: -9px;
+  border-radius: 21px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  animation: nkSpin 0.9s linear infinite;
+}
+
+@keyframes nkFadeIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes nkPulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.05); }
+}
+@keyframes nkSpin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preloader-mark,
+  .preloader-mark::after { animation: none; }
+}
+
 /* ── Focus styles ─────────────────────────────────────────────────────────── */
 :focus-visible {
   outline: 2px solid var(--accent);
