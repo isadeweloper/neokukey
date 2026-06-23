@@ -20,7 +20,9 @@ target/
 *.iml
 *.ipr
 
-/src/main/resources/application.yml
+# application.yml is committed: it is env-parameterized (no real secrets) and
+# required for the Render Docker build.
+# /src/main/resources/application.yml
 
 ### NetBeans ###
 /nbproject/private/
